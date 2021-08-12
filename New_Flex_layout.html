@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Flex Layout </title>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .Navigation {
+            background: blueviolet;
+            flex: 1;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .mainContent {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .mainContent>article {
+            flex: 3;
+            min-height: 60vh;
+        }
+
+        .mainContent>aside {
+            background: beige;
+            flex: 1;
+        }
+
+        header,
+        footer {
+            background: yellowgreen;
+            height: 20vh;
+        }
+
+        header,
+        footer,
+        article,
+        nav,
+        aside {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="Navigation">Nav</nav>
+    <div class="mainContainer">
+        <header>Header</header>
+        <main class="mainContent">
+            <article>Article</article>
+            <aside>Aside</aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
